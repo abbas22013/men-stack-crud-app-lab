@@ -1,0 +1,15 @@
+<!-- views/edit.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit Car</title>
+</head>
+<body>
+  <h1>Edit Car</h1>
+  <form action="/cars/<%= car._id %>?_method=PUT" method="POST">
+    <label for="make">Make:</label>
+    <input type="text" name="make" value="<%= car.make %>" required><br>
+
+    <label for="model">Model:</

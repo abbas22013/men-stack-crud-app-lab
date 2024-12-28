@@ -1,0 +1,24 @@
+<!-- views/index.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cars List</title>
+</head>
+<body>
+  <h1>Cars List</h1>
+  <a href="/cars/new">Add New Car</a>
+  <ul>
+    <% cars.forEach(car => { %>
+      <li>
+        <a href="/cars/<%= car._id %>"><%= car.make %> <%= car.model %></a>
+        <a href="/cars/<%= car._id %>/edit">Edit</a>
+        <form action="/cars/<%= car._id %>?_method=DELETE" method="POST">
+          <button type="submit">Delete</button>
+        </form>
+      </li>
+    <% }) %>
+  </ul>
+</body>
+</html>
