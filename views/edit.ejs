@@ -1,4 +1,3 @@
-<!-- views/edit.ejs -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,4 +11,26 @@
     <label for="make">Make:</label>
     <input type="text" name="make" value="<%= car.make %>" required><br>
 
-    <label for="model">Model:</
+    <label for="model">Model:</label>
+    <input type="text" name="model" value="<%= car.model %>" required><br>
+
+    <label for="year">Year:</label>
+    <input type="number" name="year" value="<%= car.year %>" required><br>
+
+    <label for="color">Color:</label>
+    <input type="text" name="color" value="<%= car.color %>" required><br>
+
+    <label for="price">Price:</label>
+    <input type="number" name="price" value="<%= car.price %>"><br>
+
+    <label for="description">Description:</label>
+    <textarea name="description"><%= car.description %></textarea><br>
+
+    <label for="image">Image URL:</label>
+    <input type="text" name="image" value="<%= car.image %>"><br>
+
+    <button type="submit">Update Car</button>
+  </form>
+  <a href="/cars/<%= car._id %>">Back to Car Details</a>
+</body>
+</html>
